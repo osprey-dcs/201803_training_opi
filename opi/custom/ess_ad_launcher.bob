@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>AD launcher</name>
+  <macros>
+    <R>cam1:</R>
+  </macros>
+  <width>860</width>
+  <height>670</height>
+  <widget type="rectangle" version="2.0.0">
+    <name>title-bar</name>
+    <class>TITLE-BAR</class>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>860</width>
+    <height use_class="true">50</height>
+    <line_width use_class="true">0</line_width>
+    <background_color use_class="true">
+      <color name="PRIMARY-HEADER-BACKGROUND" red="151" green="188" blue="202">
+      </color>
+    </background_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>title</name>
+    <class>TITLE</class>
+    <text>Area Detector</text>
+    <x use_class="true">20</x>
+    <y use_class="true">0</y>
+    <width>570</width>
+    <height use_class="true">50</height>
+    <font use_class="true">
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <transparent use_class="true">true</transparent>
+    <horizontal_alignment use_class="true">0</horizontal_alignment>
+    <vertical_alignment use_class="true">1</vertical_alignment>
+    <wrap_words use_class="true">false</wrap_words>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>subtitle</name>
+    <class>SUBTITLE</class>
+    <text>Demonstration</text>
+    <x>590</x>
+    <y use_class="true">20</y>
+    <width>250</width>
+    <height use_class="true">30</height>
+    <font use_class="true">
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color use_class="true">
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <horizontal_alignment use_class="true">2</horizontal_alignment>
+    <vertical_alignment use_class="true">2</vertical_alignment>
+    <wrap_words use_class="true">false</wrap_words>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>group-1</name>
+    <macros>
+      <P>13SIM1:</P>
+    </macros>
+    <x>20</x>
+    <y>70</y>
+    <width>400</width>
+    <height>280</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>group-rectangle-1</name>
+      <width>400</width>
+      <height>280</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+      <corner_width>10</corner_width>
+      <corner_height>10</corner_height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>group-title-1</name>
+      <text>Simulated Detector</text>
+      <width>400</width>
+      <height>30</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>2</vertical_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_1</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/custom/image.bob</file>
+          <macros>
+            <Array>Image</Array>
+            <Dev>Pva1</Dev>
+            <Image>:</Image>
+            <Sys>13SIM1:</Sys>
+          </macros>
+          <target>tab</target>
+          <description>pva Image (SIM)</description>
+        </action>
+      </actions>
+      <x>100</x>
+      <y>130</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/autoconvert/ADBase.opi</file>
+          <target>tab</target>
+          <description>AD Control</description>
+        </action>
+      </actions>
+      <text>AD Control</text>
+      <x>100</x>
+      <y>50</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_3</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/external/ad_view.opi</file>
+          <macros>
+            <Cam>cam1:</Cam>
+            <Dev>:</Dev>
+            <Image>image1:</Image>
+            <Stats>Stats1:</Stats>
+            <Sys>13SIM1</Sys>
+          </macros>
+          <target>tab</target>
+          <description>Image</description>
+        </action>
+      </actions>
+      <text>Mono Image (CA)</text>
+      <x>100</x>
+      <y>90</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_17</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/autoconvert/simDetectorSetup.opi</file>
+          <macros>
+            <Array>Image</Array>
+            <Dev>Pva1</Dev>
+            <Image>:</Image>
+            <Sys>13SIM1:</Sys>
+          </macros>
+          <target>tab</target>
+          <description>Simulated detector setup</description>
+        </action>
+      </actions>
+      <x>100</x>
+      <y>170</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>group-1_2</name>
+    <macros>
+      <P>13URL1:</P>
+    </macros>
+    <x>440</x>
+    <y>70</y>
+    <width>400</width>
+    <height>280</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <transparent>true</transparent>
+    <widget type="rectangle" version="2.0.0">
+      <name>group-rectangle-1_3</name>
+      <width>400</width>
+      <height>280</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+      <corner_width>10</corner_width>
+      <corner_height>10</corner_height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>group-title-1_3</name>
+      <text>Simulated Detector</text>
+      <width>400</width>
+      <height>30</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="16.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>2</vertical_alignment>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_13</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/custom/image.bob</file>
+          <macros>
+            <Array>Image</Array>
+            <Dev>Pva1</Dev>
+            <Image>:</Image>
+            <Sys>13SIM1:</Sys>
+          </macros>
+          <target>tab</target>
+          <description>pva Image (SIM)</description>
+        </action>
+      </actions>
+      <x>100</x>
+      <y>130</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_14</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/autoconvert/URLDriver.opi</file>
+          <target>tab</target>
+          <description>AD Control</description>
+        </action>
+      </actions>
+      <text>AD Control</text>
+      <x>100</x>
+      <y>50</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_15</name>
+      <actions>
+        <action type="open_display">
+          <file>../../201803_training/opi/external/ad_view.opi</file>
+          <macros>
+            <Cam>cam1:</Cam>
+            <Dev>:</Dev>
+            <Image>image1:</Image>
+            <Stats>Stats1:</Stats>
+            <Sys>13URL1</Sys>
+          </macros>
+          <target>tab</target>
+          <description>Image</description>
+        </action>
+      </actions>
+      <text>Mono Image (CA)</text>
+      <x>100</x>
+      <y>90</y>
+      <width>200</width>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+</display>
